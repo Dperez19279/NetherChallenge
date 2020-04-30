@@ -23,9 +23,6 @@ execute at @e[tag=spawnenderman] run summon minecraft:snowball ~1 ~1 ~ {Motion:[
 kill @e[tag=snowballed]
 tag @e[tag=spawnenderman] add snowballed
 
-# Clear all players inventories of jigsaw blocks that are taken by hoppers
-clear @a minecraft:jigsaw
-
 scoreboard players set #spawnpoint_count spawnpoint_count 0
 
 execute at @e[tag=spawnpoint] run scoreboard players add #spawnpoint_count spawnpoint_count 1
