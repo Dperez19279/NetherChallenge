@@ -6,11 +6,11 @@ The goal of this datapack is to start in the Nether with no items. In the past, 
 
 1. Launch a Minecraft instance with the version 1.16 (currently in "Latest Snapshot")
 2. Create a world you want to add this datapack to (it can be an already existing world, but you may want to make a backup just in case)
-3. Download "Nether Challenge.zip"
+3. Download "NetherChallenge.zip" from http://github.com/Dperez19279/NetherChallenge/releases/latest/download/NetherChallenge.zip
 4. Open the world save
    * For singleplayer: From the world selection screen, select the world > Edit > Open World Folder
    * For multiplayer: Open the "world" folder
-5. Place "Nether Challenge.zip" inside the "datapacks" folder
+5. Place "NetherChallenge.zip" inside the "datapacks" folder
 6. Enter the world
 
 ## How to setup the challenge
@@ -41,7 +41,7 @@ The goal of this datapack is to start in the Nether with no items. In the past, 
 * Magma cream dropped into cauldrons with water will consume level of water while cleaning the magma cream into a slime ball
 * Brewing Stands can also be crafted from blackstone
 * Splash potions will drop a piece of sand when the potion shatters
-* A replica of a bug from snapshot 15w31a. When a splash water bottle extinguishes fire, it temporarily sets a flowing water that can create cobblestone
+* A replica of a bug from snapshot 15w31a. When a splash water bottle extinguishes fire, it temporarily sets a flowing water that can create cobblestone. It may sometimes not create the water if the splash water bottle barely hits the fire. Complex setups can allow the water to spread
 * The spawnpoint system as shown in steps 3-7 of "How to setup the challenge" and "Starting the challenge"
 
 ## Sidenotes
