@@ -8,10 +8,15 @@ execute as @e[tag=spawnenderman] at @s unless entity @e[tag=spawnpoint,tag=!news
 tag @e[tag=newspawnpoint] remove newspawnpoint
 
 # Allow the items to stack
-execute as @e[tag=spawnpoint] run data modify entity @s Item.Count set value 1
-execute as @e[tag=spawnpoint] run data modify entity @s Age set value 0
+# execute as @e[tag=spawnpoint] run data modify entity @s Item.Count set value 1
+# execute as @e[tag=spawnpoint] run data modify entity @s Age set value -32768
 
+tag @e[tag=spawnpoint,sort=random,limit=1] add checkStack
+execute at @e[tag=checkStack] run kill @e[tag=spawnpoint,tag=!checkStack,distance=0]
+tag @e[tag=checkStack] remove checkStack
 
+# Kill spawnenderman who never teleported
+kill @e[tag=snowballed]
 
 # Force spawnenderman to teleported
 execute at @e[tag=spawnenderman] run summon minecraft:snowball ~ ~1 ~-1 {Motion:[0.0,0.0,0.1]}
@@ -20,7 +25,6 @@ execute at @e[tag=spawnenderman] run summon minecraft:snowball ~-1 ~1 ~ {Motion:
 execute at @e[tag=spawnenderman] run summon minecraft:snowball ~1 ~1 ~ {Motion:[-0.1,0.0,0.0]}
 
 # Kill spawnenderman who never teleported
-kill @e[tag=snowballed]
 tag @e[tag=spawnenderman] add snowballed
 
 scoreboard players set #spawnpoint_count spawnpoint_count 0
